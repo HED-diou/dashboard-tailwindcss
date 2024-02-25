@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body class="text-gray-800 font-inter">
+    <!-- start: Sidebar -->
+    <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
+        <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
+            <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded object-cover">
+            <span class="text-lg font-bold text-white ml-3">RapportExpress</span>
+        </a>
+        <ul class="mt-4">
+            <li class="mb-1 group active">
+                <a href="../"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="ri-home-2-line mr-3 text-lg"></i>
+                    <span class="text-sm">Dashboard</span>
+                </a>
+            </li>
+            <li class="mb-1 group active">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="ri-star-line text-yellow-500 text-lg mr-3"></i>
+                    <span class="text-sm">Generate Rapport</span>
+                </a>
+            </li>
+            <li class="mb-1 group">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                    <i class="ri-instance-line mr-3 text-lg"></i>
+                    <span class="text-sm">Orders</span>
+                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                </a>
+                <ul class="pl-7 mt-2 hidden group-[.selected]:block">
+                    <li class="mb-4">
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active
+                            order</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed
+                            order</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled
+                            order</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mb-1 group">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                    <i class="ri-flashlight-line mr-3 text-lg"></i>
+                    <span class="text-sm">Services</span>
+                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                </a>
+                <ul class="pl-7 mt-2 hidden group-[.selected]:block">
+                    <li class="mb-4">
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Manage
+                            services</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mb-1 group">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="ri-settings-2-line mr-3 text-lg"></i>
+                    <span class="text-sm">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+
+    <!-- part 0 -->
+<style>
+.rapport {
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial ou une police sans-serif générique */
+    font-size: 16px; /* Taille de la police */
+    line-height: 1.6; /* Hauteur de ligne */
+    color: #333; /* Couleur du texte */
+}
+
+.titre {
+    margin-left: 220px;
+    font-size: 24px; /* Taille de la police pour les titres */
+    font-weight: bold; /* Gras pour les titres */
+    margin-bottom: 10px; /* Marge inférieure pour les titres */
+}
+
+.rapport p {
+    margin-bottom: 15px; /* Marge inférieure pour les paragraphes */
+}
+
+.rapport h2 {
+    font-size: 20px; /* Taille de la police pour les sous-titres */
+    font-weight: bold; /* Gras pour les sous-titres */
+    margin-top: 20px; /* Marge supérieure pour les sous-titres */
+    margin-bottom: 10px; /* Marge inférieure pour les sous-titres */
+}
+
+.rapport img {
+    max-width: 100%; /* Largeur maximale de l'image pour s'adapter au conteneur */
+    display: block; /* Affichage en bloc pour centrer l'image */
+    margin: 20px auto; /* Marge autour de l'image avec centrage automatique */
+}
+
+.report {
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20mm; /* Add some padding to mimic margin */
+    background-color: white; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for visual effect */
+    position: fixed; /* Fix the position on the screen */
+    top: 50%; /* Position from the top */
+    left: 70%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the element */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.pagination {
+    position: fixed;
+    bottom: 20px; /* Ajustez la distance par rapport au bas de la fenêtre */
+    right: 20px; /* Ajustez la distance par rapport au bord droit de la fenêtre */
+    z-index: 9999;
+}
+.pagination button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+    <!-- start: Main -->
+
+
+    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 transition-all main">
+
+        <div class="container">
+            <div class="row">
+
+
+                <section class="discussions">
+                    <div class="discussion search">
+                        <div class="searchbar">
+                            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+                            <input type="text" placeholder="Search..."></input>
+                        </div>
+                        <a href="../"
+                            class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                            <span class="text-sm">Add elements</span>
+                        </a>
+                        <a href="../"
+                            class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                            <span class="text-sm">Generate report</span>
+                        </a>
+                    </div>
+                    <div class="discussion message-active">
+                        <div class="photo" style="background-image: url(./src/pdf.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Final_Project.pdf</p>
+                            <p class="message"> Desc: Final_PJT</p>
+                        </div>
+                        <div class="timer">12 sec</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/docx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Experience_Stage.docx</p>
+                            <p class="message">Desc: Exp_Stage</p>
+                        </div>
+                        <div class="timer">3 min</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pptx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Analysis.pptx </p>
+                            <p class="message">Desc: Analysis</p>
+                        </div>
+                        <div class="timer">42 min</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/xlsx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Task_Tracking.xlsx</p>
+                            <p class="message"> Desc: Task_Track</p>
+                        </div>
+                        <div class="timer">2 hour</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/txt.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Journal.txt</p>
+                            <p class="message"> Desc: Journal</p>
+                        </div>
+                        <div class="timer">1 day</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pptx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Client_Presentation.pptx</p>
+                            <p class="message"> Desc: Client_Pres</p>
+                        </div>
+                        <div class="timer">4 days</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pdf.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Reflections.pdf</p>
+                            <p class="message"> Desc: Reflections</p>
+                        </div>
+                        <div class="timer">1 week</div>
+                    </div>
+                </section>
+
+                <section class="discussions report">
+                    <div class="rapport_1">
+                        <img src="placeholder.jpg" alt="Image illustrative">
+
+                        <h1 class="titre">Rapport de stage</h1>
+                        <img src="placeholder.jpg" alt="Image illustrative">
+
+                        <p>Le rapport de stage présente une analyse détaillée des activités réalisées durant la période de stage.</p>
+                        <h2>Introduction</h2>
+                        <p>L'introduction donne un aperçu des objectifs du stage et des attentes de l'entreprise.</p>
+                        <h2>Contexte</h2>
+                        <p>Le contexte expose le cadre dans lequel s'inscrit le stage, y compris les technologies utilisées et les projets en cours.</p>
+                        <h2>Travail réalisé</h2>
+                        <p>Cette section décrit en détail les tâches effectuées pendant le stage, y compris les problèmes rencontrés et les solutions proposées.</p>
+                        <h2>Résultats</h2>
+                        <p>Les résultats présentent les réalisations concrètes obtenues grâce au travail effectué lors du stage.</p>
+                        <h2>Conclusion</h2>
+                        <p>La conclusion résume les principales conclusions tirées du stage et propose des recommandations pour l'avenir.</p>
+                        <img src="placeholder.jpg" alt="Image illustrative">
+
+                    </div>
+                </section>
+                <div class="pagination">
+                    <button class="next">Envoyer à votre responsable</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </main>
+    <!-- end: Main -->
+
+
+
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+
+
+
+</html>
+
+
+
+
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // start: Chart
+    new Chart(document.getElementById('order-chart'), {
+        type: 'line',
+        data: {
+            labels: generateNDays(7),
+            datasets: [
+                {
+                    label: 'Active',
+                    data: generateRandomData(7),
+                    borderWidth: 1,
+                    fill: true,
+                    pointBackgroundColor: 'rgb(59, 130, 246)',
+                    borderColor: 'rgb(59, 130, 246)',
+                    backgroundColor: 'rgb(59 130 246 / .05)',
+                    tension: .2
+                },
+                {
+                    label: 'Completed',
+                    data: generateRandomData(7),
+                    borderWidth: 1,
+                    fill: true,
+                    pointBackgroundColor: 'rgb(16, 185, 129)',
+                    borderColor: 'rgb(16, 185, 129)',
+                    backgroundColor: 'rgb(16 185 129 / .05)',
+                    tension: .2
+                },
+                {
+                    label: 'Canceled',
+                    data: generateRandomData(7),
+                    borderWidth: 1,
+                    fill: true,
+                    pointBackgroundColor: 'rgb(244, 63, 94)',
+                    borderColor: 'rgb(244, 63, 94)',
+                    backgroundColor: 'rgb(244 63 94 / .05)',
+                    tension: .2
+                },
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    function generateNDays(n) {
+        const data = []
+        for (let i = 0; i < n; i++) {
+            const date = new Date()
+            date.setDate(date.getDate() - i)
+            data.push(date.toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric'
+            }))
+        }
+        return data
+    }
+    function generateRandomData(n) {
+        const data = []
+        for (let i = 0; i < n; i++) {
+            data.push(Math.round(Math.random() * 10))
+        }
+        return data
+    }
+    // end: Chart
+
+
+
+
+
+
+
+</script>
