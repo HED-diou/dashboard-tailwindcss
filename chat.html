@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <title>Dashboard</title>
+    <style>
+        .rapport_1{
+      padding: 30px;
+      margin: 30px;
+    }
+    .img1{
+      width: 100%;
+      height: 150px;
+    }
+    .title{
+      font-size: 50px;font-weight: bold;width: 100%;text-align: center;
+    }
+    
+    .img2{
+      width: 100%;
+      height: 150px;
+    }
+    
+    .img3{
+      width: 100%;
+      height: 150px;
+    }
+    h2{
+      font-weight:bold ;
+      font-style: italic;
+    }
+    
+    </style>
 </head>
+
 <body class="text-gray-800 font-inter">
     <!-- start: Sidebar -->
     <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4 z-50 sidebar-menu transition-transform">
@@ -16,49 +46,62 @@
         </a>
         <ul class="mt-4">
             <li class="mb-1 group active">
-                <a href="../" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                <a href="../"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Dashboard</span>
                 </a>
             </li>
             <li class="mb-1 group active">
-                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-star-line text-yellow-500 text-lg mr-3"></i>
                     <span class="text-sm">Generate Rapport</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                     <i class="ri-instance-line mr-3 text-lg"></i>
                     <span class="text-sm">Orders</span>
                     <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
                 </a>
                 <ul class="pl-7 mt-2 hidden group-[.selected]:block">
                     <li class="mb-4">
-                        <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
-                    </li> 
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active
+                            order</a>
+                    </li>
                     <li class="mb-4">
-                        <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed order</a>
-                    </li> 
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Completed
+                            order</a>
+                    </li>
                     <li class="mb-4">
-                        <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled order</a>
-                    </li> 
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Canceled
+                            order</a>
+                    </li>
                 </ul>
             </li>
             <li class="mb-1 group">
-                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                     <i class="ri-flashlight-line mr-3 text-lg"></i>
                     <span class="text-sm">Services</span>
                     <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
                 </a>
                 <ul class="pl-7 mt-2 hidden group-[.selected]:block">
                     <li class="mb-4">
-                        <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Manage services</a>
+                        <a href="#"
+                            class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Manage
+                            services</a>
                     </li>
                 </ul>
             </li>
             <li class="mb-1 group">
-                <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                <a href="#"
+                    class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-settings-2-line mr-3 text-lg"></i>
                     <span class="text-sm">Settings</span>
                 </a>
@@ -69,522 +112,218 @@
     <!-- end: Sidebar -->
 
 
-<!-- part 0 -->
+    <!-- part 0 -->
+    <style>
+        .rapport {
+            font-family: Arial, sans-serif;
+            /* Utilisation de la police Arial ou une police sans-serif générique */
+            font-size: 16px;
+            /* Taille de la police */
+            line-height: 1.6;
+            /* Hauteur de ligne */
+            color: #333;
+            /* Couleur du texte */
+        }
 
+        .titre {
+            margin-left: 220px;
+            font-size: 24px;
+            /* Taille de la police pour les titres */
+            font-weight: bold;
+            /* Gras pour les titres */
+            margin-bottom: 10px;
+            /* Marge inférieure pour les titres */
+        }
+
+        .rapport p {
+            margin-bottom: 15px;
+            /* Marge inférieure pour les paragraphes */
+        }
+
+        .rapport h2 {
+            font-size: 20px;
+            /* Taille de la police pour les sous-titres */
+            font-weight: bold;
+            /* Gras pour les sous-titres */
+            margin-top: 20px;
+            /* Marge supérieure pour les sous-titres */
+            margin-bottom: 10px;
+            /* Marge inférieure pour les sous-titres */
+        }
+
+        .rapport img {
+            max-width: 100%;
+            /* Largeur maximale de l'image pour s'adapter au conteneur */
+            display: block;
+            /* Affichage en bloc pour centrer l'image */
+            margin: 20px auto;
+            /* Marge autour de l'image avec centrage automatique */
+        }
+
+        .report {
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height */
+            margin: 0 auto;
+            /* Center the content horizontally */
+            padding: 20mm;
+            /* Add some padding to mimic margin */
+            background-color: white;
+            /* Set background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Add shadow for visual effect */
+            position: fixed;
+            /* Fix the position on the screen */
+            top: 50%;
+            /* Position from the top */
+            left: 70%;
+            /* Position from the left */
+            transform: translate(-50%, -50%);
+            /* Center the element */
+            z-index: 9999;
+            /* Ensure it's on top of other elements */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .pagination {
+            position: fixed;
+            bottom: 20px;
+            /* Ajustez la distance par rapport au bas de la fenêtre */
+            right: 20px;
+            /* Ajustez la distance par rapport au bord droit de la fenêtre */
+            z-index: 9999;
+        }
+
+        .pagination button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
     <!-- start: Main -->
-    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
-        <div class="py-2 px-6 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30 min-h-full">
-            <!-- Votre contenu ici -->
-            <!-- part 1 -->
 
 
+    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 transition-all main">
 
-    <button type="button" class="text-lg text-gray-600 sidebar-toggle">
-        <i class="ri-menu-line"></i>
-    </button>
-    <ul class="flex items-center text-sm ml-4">
-        <li class="mr-2">
-            <a href="#" class="text-gray-400 hover:text-gray-600 font-medium">Dashboard</a>
-        </li>
-        <li class="text-gray-600 mr-2 font-medium">/</li>
-        <li class="text-gray-600 mr-2 font-medium">RapportGeneration</li>
-    </ul>
-    <ul class="ml-auto flex items-center">
-        <li class="mr-1 dropdown">
-            <button type="button" class="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-gray-600">
-                <i class="ri-search-line"></i>
-            </button>
-            <div class="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
-                <form action="" class="p-4 border-b border-b-gray-100">
-                    <div class="relative w-full">
-                        <input type="text" class="py-2 pr-4 pl-10 bg-gray-50 w-full outline-none border border-gray-100 rounded-md text-sm focus:border-blue-500" placeholder="Search...">
-                        <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"></i>
-                    </div>
-                </form>
-                <div class="mt-3 mb-2">
-                    <div class="text-[13px] font-medium text-gray-400 ml-4 mb-2">Recently</div>
-                    <ul class="max-h-64 overflow-y-auto">
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">Create landing page</div>
-                                    <div class="text-[11px] text-gray-400">$345</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="dropdown">
-            <button type="button" class="dropdown-toggle text-gray-400 w-8 h-8 rounded flex items-center justify-center hover:bg-gray-50 hover:text-gray-600">
-                <i class="ri-notification-3-line"></i>
-            </button>
-            <div class="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
-                <div class="flex items-center px-4 pt-4 border-b border-b-gray-100 notification-tab">
-                    <button type="button" data-tab="notification" data-tab-page="notifications" class="text-gray-400 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1 active">Notifications</button>
-                    <button type="button" data-tab="notification" data-tab-page="messages" class="text-gray-400 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1">Messages</button>
-                </div>
-                <div class="my-2">
-                    <ul class="max-h-64 overflow-y-auto" data-tab-for="notification" data-page="notifications">
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                    <div class="text-[11px] text-gray-400">from a user</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                    <div class="text-[11px] text-gray-400">from a user</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                    <div class="text-[11px] text-gray-400">from a user</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                    <div class="text-[11px] text-gray-400">from a user</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">New order</div>
-                                    <div class="text-[11px] text-gray-400">from a user</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="max-h-64 overflow-y-auto hidden" data-tab-for="notification" data-page="messages">
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                    <div class="text-[11px] text-gray-400">Hello there!</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                    <div class="text-[11px] text-gray-400">Hello there!</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                    <div class="text-[11px] text-gray-400">Hello there!</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                    <div class="text-[11px] text-gray-400">Hello there!</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="py-2 px-4 flex items-center hover:bg-gray-50 group">
-                                <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-                                <div class="ml-2">
-                                    <div class="text-[13px] text-gray-600 font-medium truncate group-hover:text-blue-500">John Doe</div>
-                                    <div class="text-[11px] text-gray-400">Hello there!</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li class="dropdown ml-3">
-            <button type="button" class="dropdown-toggle flex items-center">
-                <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded block object-cover align-middle">
-            </button>
-            <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                <li>
-                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                </li>
-                <li>
-                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                </li>
-                <li>
-                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+        <div class="container">
+            <div class="row">
 
-            
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
-                <div class="flex justify-between mb-4 items-start">
-                    <!-- Generate Repport Section -->
-                    <div class="font-medium">Generate Repport</div>
-                    <div class="dropdown">
-                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600"><i class="ri-more-fill"></i></button>
-                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="flex items-center mb-4 order-tab">
-                    <button type="button" data-tab="order" data-tab-page="active" class="bg-gray-50 text-sm font-medium text-gray-400 py-2 px-4 rounded-tl-md rounded-bl-md hover:text-gray-600 active">Active</button>
-                    <button type="button" data-tab="order" data-tab-page="completed" class="bg-gray-50 text-sm font-medium text-gray-400 py-2 px-4 hover:text-gray-600">Completed</button>
-                    <button type="button" data-tab="order" data-tab-page="canceled" class="bg-gray-50 text-sm font-medium text-gray-400 py-2 px-4 rounded-tr-md rounded-br-md hover:text-gray-600">Canceled</button>
-                </div> -->
-                <div class="overflow-x-auto">
-                    <!-- part 1 -->
-                <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
-                    <div class="flex justify-between mb-4 items-start">
-                        <!-- Chat Section -->
-                        <div class="font-medium">RapportExpress Generator</div>
-                        <!-- Placeholder for Actions -->
-                        <div class="flex items-center">
-                            <!-- You can add dropdown or other actions here if needed -->
+
+                <section class="discussions">
+                    <div class="discussion search">
+                        <div class="searchbar">
+                            <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+                            <input type="text" placeholder="Search..."></input>
                         </div>
+                        <a href="../"
+                            class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                            <span class="text-sm">Add elements</span>
+                        </a>
+                        <!-- <a href="../"
+                            class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                            <span class="text-sm">Generate report</span>
+                        </a> -->
+                        <button
+                            class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100"
+                            id="generate">Générer Rapport</button>
                     </div>
-                    <!-- Chat area -->
-                    <div id="parentElement">
-                        <!-- <div class="overflow-y-auto max-h-48 border border-gray-200 p-4 mb-4 rounded-md">
-                            <div class="text-gray-600 mb-2 text-right">
-                                <strong>You:</strong> Generate rapport for my task!
-                            </div>
-                        </div> -->
-                        <!-- <div class="overflow-y-auto max-h-48 border border-gray-200 p-4 mb-4 rounded-md"> -->
-                            <!-- Chat messages go here -->
-    
-                            <!-- <div class="text-gray-600 mb-2">
-                                <strong>REX:</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ut mollitia accusantium culpa animi modi numquam iure veniam libero! Dignissimos asperiores consectetur corrupti labore quasi, modi recusandae libero velit quod.
-                                Aspernatur aperiam soluta a qui quidem eligendi quibusdam similique rerum pariatur porro. Illum numquam odio vitae inventore eligendi ex vel ipsam cum reiciendis repellendus, mollitia velit, illo laboriosam fugit laborum?
-                                Aspernatur aperiam soluta a qui quidem eligendi quibusdam similique rerum pariatur porro. Illum numquam odio vitae inventore eligendi ex vel ipsam cum reiciendis repellendus, mollitia velit, illo laboriosam fugit laborum?
-                                Aspernatur aperiam soluta a qui quidem eligendi quibusdam similique rerum pariatur porro. Illum numquam odio vitae inventore eligendi ex vel ipsam cum reiciendis repellendus, mollitia velit, illo laboriosam fugit laborum?
-                                <div><canvas id="order-chart"></canvas></div>
-                                Aperiam odio sint iste vitae. Error fugit vel explicabo debitis omnis fugiat delectus tempora, labore sed. Magni, ratione possimus asperiores aliquam nobis cum animi aliquid repudiandae totam quisquam! Minus, velit?
-                                Aspernatur aperiam soluta a qui quidem eligendi quibusdam similique rerum pariatur porro. Illum numquam odio vitae inventore eligendi ex vel ipsam cum reiciendis repellendus, mollitia velit, illo laboriosam fugit laborum?
-                                <br><button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">Download as a PDF</button>
-    
-                            </div> -->
+                    <div class="discussion message-active">
+                        <div class="photo" style="background-image: url(./src/pdf.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Final_Project.pdf</p>
+                            <p class="message"> Desc: Final_PJT</p>
+                        </div>
+                        <div class="timer">12 sec</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/docx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Experience_Stage.docx</p>
+                            <p class="message">Desc: Exp_Stage</p>
+                        </div>
+                        <div class="timer">3 min</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pptx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Analysis.pptx </p>
+                            <p class="message">Desc: Analysis</p>
+                        </div>
+                        <div class="timer">42 min</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/xlsx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Task_Tracking.xlsx</p>
+                            <p class="message"> Desc: Task_Track</p>
+                        </div>
+                        <div class="timer">2 hour</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/txt.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Journal.txt</p>
+                            <p class="message"> Desc: Journal</p>
+                        </div>
+                        <div class="timer">1 day</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pptx.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Client_Presentation.pptx</p>
+                            <p class="message"> Desc: Client_Pres</p>
+                        </div>
+                        <div class="timer">4 days</div>
+                    </div>
+
+                    <div class="discussion">
+                        <div class="photo" style="background-image: url(./src/pdf.png);">
+                        </div>
+                        <div class="desc-contact">
+                            <p class="name">Reflections.pdf</p>
+                            <p class="message"> Desc: Reflections</p>
+                        </div>
+                        <div class="timer">1 week</div>
+                    </div>
+                </section>
+
+
+                <section class="discussions report">
+                    <div class="rapport_1">
                         
-                        <!-- </div> -->
-                        
-                        <!-- More chat messages -->
+
                     </div>
-                    <!-- Input for typing messages -->
-                    <div class="flex justify-between">
-                        <input type="text" value="Generate rapport for my task!" placeholder="Type your message..." class="w-full border border-gray-200 p-2 rounded-md mr-2 focus:outline-none">
-                        <button id="generateButton" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">Generate</button>
-                    </div>
-                    
+                </section>
+                <div class="pagination">
+                    <button class="next">Envoyer à votre responsable</button>
                 </div>
-        
-                </div>
+
+
             </div>
-            <!-- END Generate Repport Section -->
-        
-            <!-- Repport Assets -->
-            <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
-                <div class="flex justify-between mb-4 items-start">
-                    <div class="font-medium">Rapport DATA</div>
-                    <div class="dropdown">
-                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600"><i class="ri-more-fill"></i></button>
-                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <form action="" class="flex items-center mb-4">
-                    <div class="relative w-full mr-2">
-                        <input type="text" class="py-2 pr-4 pl-10 bg-gray-50 w-full outline-none border border-gray-100 rounded-md text-sm focus:border-blue-500" placeholder="Search...">
-                        <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"></i>
-                    </div>
-                    <select class="text-sm py-2 pl-4 pr-10 bg-gray-50 border border-gray-100 rounded-md focus:border-blue-500 outline-none appearance-none bg-select-arrow bg-no-repeat bg-[length:16px_16px] bg-[right_16px_center]">
-                        <option value="">All</option>
-                        <option value="">New</option>
-                        <option value="">Last</option>
-                    </select>
-                </form>
-                <div class="overflow-x-auto">
-                    <table class="w-full min-w-[540px]">
-                        <thead>
-                            <tr>
-                                <th class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tl-md rounded-bl-md">DATA Name</th>
-                                <th class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">Extention</th>
-                                <th class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left">Status</th>
-                                <th class="text-[12px] uppercase tracking-wide font-medium text-gray-400 py-2 px-4 bg-gray-50 text-left rounded-tr-md rounded-br-md"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="flex items-center">
-                                        <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded object-cover block">
-                                        <a href="#" class="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">DATA 1</a>
-                                    </div>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">.txt</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">Primary task</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="dropdown">
-                                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i class="ri-more-2-fill"></i></button>
-                                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="flex items-center">
-                                        <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded object-cover block">
-                                        <a href="#" class="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">DATA 2</a>
-                                    </div>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">.ppt</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">Primary task</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="dropdown">
-                                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i class="ri-more-2-fill"></i></button>
-                                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="flex items-center">
-                                        <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded object-cover block">
-                                        <a href="#" class="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">DATA 3</a>
-                                    </div>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">.xlsx</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">Primary task</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="dropdown">
-                                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i class="ri-more-2-fill"></i></button>
-                                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="flex items-center">
-                                        <img src="src/rs2_logo_2.png" alt="" class="w-8 h-8 rounded object-cover block">
-                                        <a href="#" class="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">DATA 4</a>
-                                    </div>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">.docx</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">Primary task</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="dropdown">
-                                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i class="ri-more-2-fill"></i></button>
-                                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="flex items-center">
-                                        <img src="src/rs2_logo_1.png" alt="" class="w-8 h-8 rounded object-cover block">
-                                        <a href="#" class="text-gray-600 text-sm font-medium hover:text-blue-500 ml-2 truncate">DATA 5</a>
-                                    </div>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">.jpg</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <span class="text-[13px] font-medium text-gray-400">Primary task</span>
-                                </td>
-                                <td class="py-2 px-4 border-b border-b-gray-50">
-                                    <div class="dropdown">
-                                        <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600 text-sm w-6 h-6 rounded flex items-center justify-center bg-gray-50"><i class="ri-more-2-fill"></i></button>
-                                        <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <button class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">Import DATA</button>
-                </div>
-            </div>
-            <!-- END Repport Assets -->
         </div>
     </main>
-    
-    
     <!-- end: Main -->
 
 
@@ -601,94 +340,117 @@
 
 
 
-
-<script>
-
-
-
-
-
-
+<script defer>
+    document.getElementById("generate").addEventListener("click", function () {
+        var rapportDiv = document.querySelector(".rapport_1");
+        var rapportContent = `
+        
+        <img src="./src/assets/logo1.png" alt="Image illustrative" class="img1">
 
 
 
+<h1 class="title" style="  font-size: 50px;font-weight: bold;width: 100%;text-align: center;
+">Rapport de stage</h1>
+<hr>
 
 
+<p>Le rapport de stage présente une analyse détaillée des activités réalisées durant la période
+    de stage. Durant cette période, j'ai eu l'opportunité de m'immerger dans l'environnement
+    professionnel et d'appliquer les connaissances acquises au cours de ma formation.</p>
 
+<h2>Introduction</h2>
+<p>L'introduction donne un aperçu des objectifs du stage et des attentes de l'entreprise. Mon
+    stage avait pour but de me familiariser avec les processus et les outils utilisés dans le
+    domaine spécifique de l'entreprise, tout en contribuant aux projets en cours. J'ai également
+    eu l'occasion de comprendre les besoins des clients et d'identifier les problèmes auxquels
+    l'entreprise était confrontée.</p>
 
+<h2>Contexte</h2>
+<p>Le contexte expose le cadre dans lequel s'inscrit le stage, y compris les technologies
+    utilisées et les projets en cours. L'entreprise dans laquelle j'ai effectué mon stage était
+    spécialisée dans le développement de logiciels pour les entreprises du secteur de la santé.
+    Elle cherchait à améliorer ses solutions existantes et à développer de nouvelles
+    fonctionnalités pour répondre aux besoins changeants du marché.</p>
 
-// start: Chart
-new Chart(document.getElementById('order-chart'), {
-    type: 'line',
-    data: {
-        labels: generateNDays(7),
-        datasets: [
-            {
-                label: 'Active',
-                data: generateRandomData(7),
-                borderWidth: 1,
-                fill: true,
-                pointBackgroundColor: 'rgb(59, 130, 246)',
-                borderColor: 'rgb(59, 130, 246)',
-                backgroundColor: 'rgb(59 130 246 / .05)',
-                tension: .2
-            },
-            {
-                label: 'Completed',
-                data: generateRandomData(7),
-                borderWidth: 1,
-                fill: true,
-                pointBackgroundColor: 'rgb(16, 185, 129)',
-                borderColor: 'rgb(16, 185, 129)',
-                backgroundColor: 'rgb(16 185 129 / .05)',
-                tension: .2
-            },
-            {
-                label: 'Canceled',
-                data: generateRandomData(7),
-                borderWidth: 1,
-                fill: true,
-                pointBackgroundColor: 'rgb(244, 63, 94)',
-                borderColor: 'rgb(244, 63, 94)',
-                backgroundColor: 'rgb(244 63 94 / .05)',
-                tension: .2
-            },
-        ]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+<h2>Travail réalisé</h2>
+<p>Cette section décrit en détail les tâches effectuées pendant le stage, y compris les
+    problèmes rencontrés et les solutions proposées. Mes principales responsabilités
+    comprenaient le développement de nouvelles fonctionnalités pour un système de gestion des
+    dossiers médicaux électroniques. J'ai collaboré avec une équipe de développeurs pour
+    concevoir, implémenter et tester ces fonctionnalités, en respectant les délais et les
+    exigences de qualité.</p>
+
+<h2>Résultats</h2>
+<p>Les résultats présentent les réalisations concrètes obtenues grâce au travail effectué lors
+    du stage. J'ai réussi à implémenter avec succès plusieurs fonctionnalités importantes, ce
+    qui a contribué à améliorer les performances et la convivialité du système.
+    <img src="./src/assets/graph1.svg" alt="Image illustrative" class="img3">
+    Mon travail a été bien accueilli par l'équipe et a été intégré dans les versions ultérieures
+    du logiciel, ce qui a eu un impact positif sur les clients et les utilisateurs finaux.
+</p>
+
+<h2>Conclusion</h2>
+<img src="./src/assets/graph2.png" alt="Image illustrative" class="img4">
+
+<p>La conclusion résume les principales conclusions tirées du stage et propose des
+    recommandations pour l'avenir. Mon expérience de stage a été extrêmement enrichissante et
+    m'a permis d'acquérir de nouvelles compétences techniques et professionnelles. Je recommande
+    à l'entreprise de continuer à investir dans le développement de son système pour répondre
+    aux besoins croissants du secteur de la santé. Je suis reconnaissant pour cette opportunité
+    et je suis convaincu que cette expérience me sera précieuse dans ma future carrière
+    professionnelle.</p>
+        `;
+        generateContent(rapportDiv, rapportContent);
+    }); z
+
+    function generateContent(element, content) {
+        var index = 0;
+        var generateInterval = setInterval(function () {
+            var char = content[index];
+            if (char === '<') {
+                // Si le caractère est une balise HTML, recherchez l'index de la fermeture de la balise
+                var endIndex = content.indexOf('>', index) + 1;
+                var tag = content.substring(index, endIndex);
+                element.insertAdjacentHTML('beforeend', tag);
+                index = endIndex;
+            } else {
+                // Si le caractère n'est pas une balise HTML, insérez-le directement
+                element.insertAdjacentHTML('beforeend', char);
+                index++;
             }
-        }
+            // Arrêtez la génération si nous avons atteint la fin du contenu
+            if (index >= content.length) {
+                clearInterval(generateInterval);
+            }
+        }, 5); // Délai entre chaque caractère ajouté (en millisecondes)
     }
-});
-
-function generateNDays(n) {
-    const data = []
-    for(let i=0; i<n; i++) {
-        const date = new Date()
-        date.setDate(date.getDate()-i)
-        data.push(date.toLocaleString('en-US', {
-            month: 'short',
-            day: 'numeric'
-        }))
-    }
-    return data
-}
-function generateRandomData(n) {
-    const data = []
-    for(let i=0; i<n; i++) {
-        data.push(Math.round(Math.random() * 10))
-    }
-    return data
-}
-// end: Chart
-
-
-
-
-
-
-
 </script>
+
+<style>
+    .rapport_1{
+  padding: 30px;
+  margin: 30px;
+}
+.img1{
+  width: 100%;
+  height: 150px;
+}
+.title{
+  font-size: 50px;font-weight: bold;width: 100%;text-align: center;
+}
+
+.img2{
+  width: 100%;
+  height: 150px;
+}
+
+.img3{
+  width: 100%;
+  height: 150px;
+}
+h2{
+  font-weight:bold ;
+  font-style: italic;
+}
+
+</style>
